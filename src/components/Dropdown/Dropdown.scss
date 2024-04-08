@@ -1,0 +1,57 @@
+@use "../../assets/styles/_variables" as *;
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px;
+
+  &__label {
+    font-size: 1.25rem;
+    color: $primary-font-color;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  &__select {
+    display: inline-block;
+    margin: 1.25rem 0;
+    padding: 0.625rem;
+    width: 260px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 0.313rem $border-color solid;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem $secondary-shadow-color,
+      0 0 0.2rem $secondary-shadow-color, 0 0 1rem $primary-shadow-color,
+      0 0 0.4rem $primary-shadow-color, 0 0 1.3rem $primary-shadow-color,
+      inset 0 0 0.6rem $primary-shadow-color;
+    color: #757575;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px), calc(100% - 1.65em) 0.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: transform 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      transform: scale(1.03);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 325px;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../assets/styles/_variables" as *;
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+
+  .search-bar__label {
+    font-size: 1.25rem;
+    color: $primary-font-color;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .search-bar__input {
+    display: inline-block;
+    margin: 1.25rem 0;
+    padding: 0.625rem;
+    width: 260px;
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 0.313rem $secondary-shadow-color solid;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem $secondary-shadow-color,
+      0 0 0.2rem $secondary-shadow-color, 0 0 1rem $primary-shadow-color,
+      0 0 0.4rem $primary-shadow-color, 0 0 1.3rem $primary-shadow-color,
+      inset 0 0 0.6rem $primary-shadow-color;
+    color: #585858;
+    transition: transform 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      transform: scale(1.03);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+  }
+}

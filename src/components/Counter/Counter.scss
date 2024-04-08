@@ -1,0 +1,59 @@
+@use "../../assets/styles/_variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.counter {
+  border: 2px $border-color solid;
+  box-shadow: 0 0 0.1rem $secondary-shadow-color,
+    0 0 0.1rem $secondary-shadow-color, 0 0 0.5rem $primary-shadow-color,
+    0 0 0.2rem $primary-shadow-color, 0 0 0.7rem $primary-shadow-color,
+    inset 0 0 0.3rem $primary-shadow-color;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 130px;
+
+  &__items {
+    color: $primary-font-color;
+    font-weight: 700;
+
+    &--heading {
+      font-size: 1.1rem;
+    }
+
+    &--value {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+  }
+
+  &__button {
+    display: inline-block;
+    width: 30px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    border: none;
+    padding: 2px;
+    font-weight: 700;
+    color: $secondary-font-color;
+    transition: transform 0.4s ease;
+
+    &:active {
+      transform: scale(1.2);
+      filter: brightness(150%);
+    }
+  }
+}
